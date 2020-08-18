@@ -5,47 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="JSPractice.js" defer></script>
-    <link rel="stylesheet" href="JSPractice.css">
+    <script src="calculator.js" defer></script>
+    <link rel="stylesheet" href="calculator.css">
 </head>
 
 <body>
+    <header>
+        <h1>Let's Calculate!</h1>
+    </header>
     <div class="calc">
-        <div class="solution">
+        <div class="expression" id="expression"></div>
+        <div class="solution" id='solution'></div>
+        <table>
+            <tbody>
 
-        </div>
-        <div class="keypad">
-            <table>
-                <thead></thead>
-                <tbody>
-                    <tr class="row">
-                        <td> <button value="9">9</button></td>
-                        <td><button value="8">8</button></td>
-                        <td><button value="7">7</button></td>
-                        <td><button value="/">/</button></td>
-                    </tr>
-                    <tr class="row">
-                        <td><button value="6">6</button></td>
-                        <td><button value="5">5</button></td>
-                        <td><button value="4">4</button></td>
-                        <td><button value="*">*</button></td>
-                    </tr>
-                    <tr class="row">
-                        <td><button value="3">3</button></td>
-                        <td><button value="2">2</button></td>
-                        <td><button value="1">1</button></td>
-                        <td><button value="+">+</button></td>
-                    </tr>
-                    <tr class="row">
-                        <td><button value="clear">Clear</button></td>
-                        <td><button value="0">0</button></td>
-                        <td><button value="=">=</button></td>
-                        <td><button value="-">-</button></td>
-                    </tr>
+                <tr class="row">
+                    <td><button value="9">9</button></td>
+                    <td><button value="8">8</button></td>
+                    <td><button value="7">7</button></td>
+                    <td><button value="/">/</button></td>
+                </tr>
+                <tr class="row">
+                    <td><button value="6">6</button></td>
+                    <td><button value="5">5</button></td>
+                    <td><button value="4">4</button></td>
+                    <td><button value="*">*</button></td>
+                </tr>
+                <tr class="row">
+                    <td><button value="3">3</button></td>
+                    <td><button value="2">2</button></td>
+                    <td><button value="1">1</button></td>
+                    <td><button value="+">+</button></td>
+                </tr>
+                <tr class="row">
+                    <td><button value="clr" onclick="clearData()">Clear</button></td>
+                    <td><button value="0">0</button></td>
+                    <td><button value="eql" onclick="solve()">=</button></td>
+                    <td><button value="-">-</button></td>
+                </tr>
 
-                </tbody>
-            </table>
-        </div>
+            </tbody>
+        </table>
+        <!-- </div> -->
     </div>
 </body>
 
