@@ -8,7 +8,9 @@ var buttonsArr = [...buttons];
 const expArea = document.getElementById('expression');
 const solArea = document.getElementById('solution');
 solArea.innerText = '0';
+
 var ops = [];
+var prevResult = '';
 
 buttonsArr.forEach(element => {
     if (element.value != 'clr' && element.value != 'eql') {
@@ -24,9 +26,11 @@ buttonsArr.forEach(element => {
 function solve() {
     console.log('solving...')
     let exp = ops.join('');
-    let result = eval(exp);
+    let result = eval(prevResult + exp);
     console.log('result', result)
     solArea.innerText = result;
+    prevResult = result;
+    ops = [];
 }
 
 function clearData() {
@@ -34,6 +38,7 @@ function clearData() {
     ops = [];
     expArea.innerText = '';
     solArea.innerText = '0';
+    prevResult = null;
 }
 
 
